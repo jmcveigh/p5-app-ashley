@@ -1,0 +1,42 @@
+---
+staff:
+  -
+    email: jdoe@gsc-orillia.org
+    facebook: http://www.facebook.com/
+    given: Jesse
+    googleplus: http://plus.google.com/
+    linkedin: http://www.linkedin.com/
+    photo: /static/images/team/pic1.jpg
+    position: 'Executive Director'
+    sur: DOE
+    twitter: http://www.twitter.com/
+  -
+    email: jdoe@gsc-orillia.org
+    facebook: http://www.facebook.com/
+    given: Joann
+    googleplus: http://plus.google.com/
+    linkedin: http://www.linkedin.com/
+    photo: /static/images/team/pic1.jpg
+    position: 'Accountant / Controller'
+    sur: DOE
+    twitter: http://www.twitter.com/
+  -
+    email: jdoe@gsc-orillia.org
+    facebook: http://www.facebook.com/
+    given: Julie
+    googleplus: http://plus.google.com/
+    linkedin: http://www.linkedin.com/
+    photo: /static/images/team/pic1.jpg
+    position: 'Graphic Designer'
+    sur: DOE
+    twitter: http://www.twitter.com/
+  -
+    email: jdoe@gsc-orillia.org
+    facebook: http://www.facebook.com/
+    given: Justin
+    googleplus: http://plus.google.com/
+    linkedin: http://www.linkedin.com/
+    photo: /static/images/team/pic1.jpg
+    position: Programmer
+    sur: DOE
+    twitter: http://www.twitter.com/

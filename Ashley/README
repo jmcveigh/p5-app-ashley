@@ -1,0 +1,2 @@
+Run script/ashley_artgen.pl --name='Company.' to generate the logo art.
+Run script/ashley_server.pl to test the application.

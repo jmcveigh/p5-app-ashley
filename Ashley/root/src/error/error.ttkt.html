@@ -1,0 +1,43 @@
+<!-- globalWrapper -->
+<div id="globalWrapper">
+    <!-- Error -->
+    <section class="error mb30">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <img class="mt15" src="[% c.uri_for('/static/images/main-logo.png') %]" alt="" class="mb40"/>
+                    <div class="mb40 mt40">&nbsp;</div>
+                    <h2 style='font-size: 210pt;opacity: 0.25;'>500</h2>
+                    <div class="mb40 mt40">&nbsp;</div>
+                    <p class='text-warning bg-warning mb30 mt30 banner'><i class='icon-warning'></i>&nbsp;&nbsp;&nbsp;&nbsp;An error has occurred at this time.  Please, come back later.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section  id="social">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 text-center">
+                    <ul class="socialNetwork">
+                        <li><a href="[% c.config.facebook %]" class="tips" title="Follow [% c.config.license_holder %] on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
+                        <li><a href="[% c.config.twitter %]" class="tips" title="Follow [% c.config.license_holder %] on Twitter" target="_blank"><i class="icon-twitter-bird iconRounded"></i></a></li>
+                        <li><a href="[% c.config.googleplus %]" class="tips" title="Follow [% c.config.license_holder %] on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+                        <li><a href="[% c.config.linkedin %]" class="tips" title="Follow [% c.config.license_holder %] on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <p>[% c.config.license_year %] <a href="[% c.config.homepage %]" target="blank">[% c.config.license_holder %]</a> / Licensed under Creative Commons.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- End footer -->
+</div>
+<!-- global wrapper -->

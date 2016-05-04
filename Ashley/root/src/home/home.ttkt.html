@@ -1,0 +1,515 @@
+<!-- header -->
+<header id="mainHeader" class="navbar-fixed-top" role="banner">
+    <div class="container">
+        <nav class="navbar navbar-default scrollMenu" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="index.html"><img src="[% c.uri_for('/static/images/main-logo.png') %]" alt="Ashley website template"/></a> </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="scrollTarget">
+                    <ul class="nav navbar-nav pull-right">
+                        [% IF slides %]<li class="active"><a href="#home"><i class="icon-home-outline"></i>Home</a></li>[% END %]
+                        [% IF news1 AND news2 AND news3 %]<li><a href="#news"><i class="icon-comment"></i>News</a></li>[% END %]
+                        [% IF services %]<li><a href="#services"><i class="icon-thumbs-up"></i>Services</a></li>[% END %]
+                        [% IF about %]<li><a href="#about"><i class="icon-star"></i>About</a></li>[% END %]
+                        [% IF plans %]<li><a href="#plans"><i class="icon-certificate"></i>Plans</a></li>[% END %]
+                        [% IF portfolio_items %]<li><a href="#works"><i class="icon-popup-1"></i>Works</a></li>[% END %]
+                        [% IF staff %]<li><a href="#staff"><i class="icon-users"></i>Staff</a></li>[% END %]
+                        [% IF c.config.webmin %]<li><a href="#contact"><i class="icon-mail"></i>Contact</a></li>[% END %]
+                    </ul>
+                </div>
+        </nav>
+    </div>
+</header>
+<!-- header -->
+<main>
+    <!-- content -->
+    [% IF slides %]
+    <section id="home" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-sm-6">
+                <div class="flexslider" id="flexHome">
+                    <ul class="slides">
+                        [% FOREACH slide = slides %]
+                            <li>
+                                <h1>[% slide.heading %]</h1>
+                                <h2>[% slide.subheading %]</h2>
+                            </li>
+                        [% END %]
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-6 hidden-xs mb40">
+                <img src="[% c.uri_for('/static/images/theme-pics/home-girl.png') %]" alt="Ashley, Bootstrap website template" class="img-responsive"/>
+            </div>
+        </div>
+    </div>
+    </section>
+    [% END %]
+    <!-- call to action -->
+    [% IF plans %]
+    <section class="color4 slice">
+    <div class="ctaBox ctaBoxFullwidth">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>
+                        [% subheadings.0 %]
+                    </h1>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg" title="" href="#plans" target="blank">
+                        <i class="icon-flash"></i> purchase now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    [% END %]
+    <!-- call to action -->
+    <!-- news -->
+
+    [% IF news1 AND news2 AND news3 %]
+    <section class="slice" id="news">
+    <div class="container imgHover">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Breaking news</h1>
+                <h2 class="subTitle">[% subheadings.1 %]</h2>
+            </div>
+        </div>
+        <div class="row">
+            <article class="col-sm-4">
+                <section class="imgWrapper">
+                    <img src="[% c.uri_for(news1.photo) %]" class="img-responsive" alt="Ashleye template image news" />
+                </section>
+
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+
+                        <a href="[% c.uri_for(news1.photo) %]" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a>
+                    </div>
+                </div>
+                <section class="newsText color4">
+                    <h3>[% news1.headline %]</h3>
+                    <h4 class="date">[% news1.date %]</h4>
+                    <p>[% news1.short %]</p>
+                    <a href="[% news1.more %]" class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
+                </section>
+            </article>
+            <article class="col-sm-4">
+                <section class="imgWrapper">
+                    <img src="[% c.uri_for(news1.photo) %]" class="img-responsive" alt="Ashleye template image news" />
+                </section>
+
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+
+                        <a href="[% c.uri_for(news2.photo) %]" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a>
+                    </div>
+                </div>
+                <section class="newsText color4">
+                    <h3>[% news2.headline %]</h3>
+                    <h4 class="date">[% news2.date %]</h4>
+                    <p>[% news2.short %]</p>
+                    <a href="[% news2.more %]" class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
+                </section>
+            </article>
+            <article class="col-sm-4">
+                <section class="imgWrapper">
+                    <img src="[% c.uri_for(news3.photo) %]" class="img-responsive" alt="Ashleye template image news" />
+                </section>
+
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+
+                        <a href="[% c.uri_for(news3.photo) %]" class="image-link" title="Zoom" ><i class="icon-search iconRounded iconBig"></i><span>zoom</span></a>
+                    </div>
+                </div>
+                <section class="newsText color4">
+                    <h3>[% news3.headline %]</h3>
+                    <h4 class="date">[% news3.date %]</h4>
+                    <p>[% news3.short %]</p>
+                    <a href="[% news3.more %]" class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
+                </section>
+            </article>
+        </div>
+    </div>
+    </section>
+    [% END %]
+    <!-- news -->
+    <!-- services -->
+    [% IF services %]
+    <section class="slice color1" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Our services</h1>
+                    <h2 class="subTitle">[% subheadings.2 %]</h2>
+                </div>
+            </div>
+        [% SET idx_services = 0 %]
+        [% WHILE idx_services < services_count %]
+            <div class="row">
+                [% SET idx_services_subindex = 0 %]
+                [% WHILE idx_services_subindex < 2 %]
+                    [% SET idx_services_current = idx_services + idx_services_subindex %]
+                    <div class="col-sm-6">
+                        <div class="row boxFeature">
+                            <div class="col-xs-3">
+                                <i class="[% services.$idx_services_current.icon %] iconBig"></i>
+                            </div>
+                            <div class="col-xs-9">
+                                <h2>[% services.$idx_services_current.heading %]</h2>
+                                <p>[% services.$idx_services_current.short %]</p>
+                            </div>
+                        </div>
+                    </div>
+                    [% SET idx_services_subindex = idx_services_subindex + 1 %]
+                [% END %]
+            [% SET idx_services = idx_services + 2 %]
+            </div>
+        [% END %]
+        </div>
+    </section>
+    [% END %]
+    <!-- services -->
+
+
+    [% IF quotes %]
+    <div id="paralaxSlice1" data-stellar-background-ratio="0.5">
+    <div class="maskParent">
+        <div class="paralaxMask"></div>
+        <div class="paralaxText container">
+            <i class="[% quotes.0.icon %] iconBig"></i>
+            <blockquote class="bigTitle">
+                [% quotes.0.quote %]
+            </blockquote>
+            [% IF quotes.0.source %]
+            <div class="bigTitle">
+                <small>
+                    [% quotes.0.source %]
+                </small>
+            [% END %]
+            </div>
+        </div>
+    </div>
+    </div>
+    [% END %]
+
+    [% IF about %]
+    <section class="slice" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>About us</h1>
+                <h2 class="subTitle">[% subheadings.3 %]</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4"> <img src="[% c.uri_for('/static/images/theme-pics/services.png') %]" alt="services" class="img-responsive"> </div>
+            <div class="col-sm-4">
+                <h2>[% about.heading1 %]</h2>
+                [% about.content1 %]
+                </p>
+            </div>
+
+            <div class="col-sm-4">
+                <h2>[% about.heading2 %]</h2>
+                [% about.content2 %]
+            </div>
+        </div>
+    </div>
+    </section>
+    [% END %]
+
+    [% IF plans %]
+    <section class="pricing slice color1" id="plans">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="noSubtitle">Our plans</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="alert alert-info alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        [% subheadings.4 %]
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                [% FOREACH plan IN plans %]
+                    <div class="col-md-3 col-sm-6">
+                        [% IF plan.focus %]
+                            <div class="pricingBloc focusPlan">
+                        [% ELSE %]
+                            <div class="pricingBloc">
+                        [% END %]
+                                <h2>[% plan.name %]</h2>
+                                <h3>[% c.config.sigil%][% plan.price %]<br><small><sub>[% c.config.currency %]</sub></small><br><span>[% plan.recurrence %]</span></h3>
+                                <ul>
+                                    [% FOREACH point IN plan.points %]
+                                        <li>[% point %]</li>
+                                    [% END %]
+                                </ul>
+                                <p class="sign">
+                                    [% plan.button %]
+                                </p>
+                            </div>
+                    </div>
+                [% END %]
+            </div>
+        </div>
+    </section>
+    [% END %]
+
+    [% IF quotes %]
+    <div id="paralaxSlice2" data-stellar-background-ratio="0.5">
+        <div class="maskParent">
+            <div class="paralaxMask"></div>
+            <div class="paralaxText container">
+                <i class="[% quotes.1.icon %] iconBig"></i>
+                <blockquote class="bigTitle">
+                    [% quotes.1.quote %]
+                    [% IF quotes.1.source %]
+                        <br><br>
+                        <small>
+                            [% quotes.1.source %]
+                        </small>
+                    [% END %]
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    [% END %]
+
+    [% IF portfolio_classes AND portfolio_items %]
+    <section class="slice" id="works">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Our Work</h1>
+                <h2 class="subTitle">[% subheadings.5 %]</h2>
+            </div>
+            <nav id="filter" class="col-md-12 text-center">
+                <ul>
+                    <li><a href="" class="btn btn-sm current" data-filter="*">All</a></li>
+                    [% FOREACH portfolio_class IN portfolio_classes %]
+                        <li><a href="" class="btn btn-sm" data-filter=".[% portfolio_class.tag %]" >[% portfolio_class.name %]</a></li>
+                    [% END %]
+                </ul>
+            </nav>
+        </div>
+        <div class="portfolio-items isotopeWrapper clearfix imgHover row" id="3">
+            [% FOREACH portfolio_item IN portfolio_items %]
+                <article class="col-sm-4 isotopeItem [% portfolio_item.tag %]">
+                    <section class="imgWrapper">
+                        <img alt="" src="[% c.uri_for(portfolio_item.image) %]" class="img-responsive">
+                    </section>
+                    <div class="mediaHover">
+                        <div class="mask"></div>
+                        <div class="iconLinks">
+                            <a href="[% portfolio_item.anchor %]" title="link" class="sizer portfolioSheet">
+                                <i class="[% portfolio_item.icon %] iconRounded iconBig"></i>
+                                <span>link</span>
+                            </a>
+                            [% IF portfolio_item.vimeo %]
+                                <a href="[% portfolio_item.vimeo %]" class="image-iframe" title="Video Popup" >
+                                    <i class="icon-search iconRounded iconBig"></i>
+                                    <span>video</span>
+                                </a>
+                            [% ELSE %]
+                                <a href="[% c.uri_for(portfolio_item.image) %]" class="image-link" title="Gallery Popup" >
+                                    <i class="icon-search iconRounded iconBig"></i>
+                                    <span>zoom</span>
+                                </a>
+                            [% END %]
+                        </div>
+                    </div>
+                    <section class="boxContent">
+                        <h3>[% portfolio_item.headline %]</h3>
+                        <p>[% portfolio_item.short %]<br>
+                            <a href="[% portfolio_item.anchor %]" class="moreLink portfolioSheet">&rarr; read more</a>
+                        </p>
+                    </section>
+                </article>
+            [% END %]
+        </div>
+    </section>
+    [% END %]
+
+    [% IF quotes %]
+    <div id="paralaxSlice3" data-stellar-background-ratio="0.5">
+        <div class="maskParent">
+            <div class="paralaxMask"></div>
+            <div class="paralaxText">
+                <i class="[% quotes.2.icon %] iconBig"></i>
+                <blockquote class="bigTitle">
+                    [% quotes.2.quote %]
+                </blockquote>
+                [% IF quotes.2.source %]
+                <div class="bigTitle">
+                    <small>
+                        [% quotes.2.source %]
+                    </small>
+                [% END %]
+                </div>
+            </div>
+        </div>
+    </div>
+    [% END %]
+
+    [% IF staff %]
+    <section class="slice" id="staff">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Meet our staff</h1>
+                    <h2 class="subTitle">[% subheadings.6 %]</h2>
+                </div>
+                [% FOREACH staff_member IN staff %]
+                <div class="col-sm-6 col-md-3">
+                    <article>
+                        <div><img src="[% c.uri_for(staff_member.photo) %]" alt="" class="img-responsive"></div>
+                        <div class="boxContent text-center color4">
+                            <h3>[% staff_member.given %] [% staff_member.sur %]</h3>
+                            <p>[% staff_member.position %]</p>
+                        </div>
+                        <div class="boxContent text-center"> <a href="mailto:[% staff_member.email %]">[% staff_member.email %]</a>
+                            <ul class="socialNetwork mt15">
+                                <li><a href="[% staff_member.facebook %]" class="tips" title="Follow [% staff_member.given %] [% staff_member.sur %] on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
+                        <li><a href="[% staff_member.twitter %]" class="tips" title="Follow [% staff_member.given %] [% staff_member.sur %] on Twitter" target="_blank"><i class="icon-twitter-bird iconRounded"></i></a></li>
+                        <li><a href="[% staff_member.googleplus %]" class="tips" title="Follow [% staff_member.given %] [% staff_member.sur %] on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+                        <li><a href="[% staff_member.linkedin %]" class="tips" title="Follow [% staff_member.given %] [% staff_member.sur %] on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                [% END %]
+            </div>
+        </div>
+    </section>
+    [% END %]
+
+    [% IF quotes %]
+    <div id="paralaxSlice4" data-stellar-background-ratio="0.5" >
+        <div class="maskParent">
+            <div class="paralaxMask"></div>
+            <div class="paralaxText">
+                <i class="[% quotes.3.icon %] iconBig"></i>
+                <blockquote class="bigTitle">
+                    [% quotes.3.quote %]
+                    [% IF quotes.3.source %]
+                        <br><br>
+                        <small>
+                            [% quotes.3.source %]
+                        </small>
+                    [% END %]
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    [% END %]
+
+
+    [% IF c.config.webmin %]
+    <section class="slice"  id="contact" >
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="noSubtitle">Contact us</h1>
+                </div>
+                <div class="col-sm-12">
+                    <div id="mapWrapper" class="mb30"></div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>[% c.config.license_holder %]</h3>
+                    <address>
+                        <p>
+                            <i class="icon-location"></i>
+                            [% c.config.address1 %] <br>
+                            [% IF c.config.address2 %]
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% c.config.address2 %]<br>
+                            [% END %]
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% c.config.city %], [% c.config.province %]<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% c.config.postal %] [% c.config.country %]<br>
+                        </p>
+                    </address>
+                    <address>
+                        <p>
+                            <i class="icon-phone"></i>&nbsp;[% c.config.phone %]<br>
+                            [% IF c.config.webmin %]<i class="icon-mail"></i>&nbsp;<a href="mailto:[% c.config.webmin %]">[% c.config.webmin %]</a>[% END %]
+                        </p>
+                    </address>
+                </div>
+                [% contact_form.render %]
+
+            </div>
+        </div>
+    </section>
+    [% END %]
+    <!-- content -->
+</main>
+<!-- footer -->
+<footer>
+    <section id="mainFooter">
+        <div class="container" id="footer">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="footerWidget">
+                        <p><a href="[% c.config.homepage %]" title="[% c.config.license_holder %] / [% c.config.bio %] "><ul class='bio'><li>[% c.config.license_holder %]</li><li>[% c.config.bio %]</li><li>[% c.config.slogan %]</li></ul></a></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="footerWidget">
+                        <h3>[% c.config.license_holder %]</h3>
+                        <address>
+                            <p>
+                                <i class="icon-location"></i>
+                                [% c.config.address1 %] <br>
+                                [% IF c.config.address2 %]
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% c.config.address2 %]<br>
+                                [% END %]
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% c.config.city %], [% c.config.province %]<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% c.config.postal %] [% c.config.country %]<br>
+                            </p>
+                        </address>
+                        <address>
+                            <p>
+                                <i class="icon-phone"></i>&nbsp;[% c.config.phone %]<br>
+                                [% IF c.config.webmin %]<i class="icon-mail"></i>&nbsp;<a href="mailto:[% c.config.webmin %]">[% c.config.webmin %]</a>[% END %]
+                            </p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <section  id="footerRights">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>[% c.config.license_year %]<a href="http://software.gsc-orillia.com" target="blank">[% c.config.license_holder %]</a> / Licensed under Creative Commons.</p>
+                </div>
+                [% IF c.config.facebook OR c.config.twitter OR c.config.googleplus OR c.config.linkedin %]
+                <div class="col-sm-6">
+                    <ul class="socialNetwork pull-right">
+                        [% IF c.config.facebook %]<li><a href="[% c.config.facebook %]" class="tips" title="Follow [% c.config.license_holder %] on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>[% END %]
+                        [% IF c.config.twitter %]<li><a href="[% c.config.twitter %]" class="tips" title="Follow [% c.config.license_holder %] on Twitter" target="_blank"><i class="icon-twitter-bird iconRounded"></i></a></li>[% END %]
+                        [% IF c.config.googleplus %]<li><a href="[% c.config.googleplus %]" class="tips" title="Follow [% c.config.license_holder %] on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>[% END %]
+                        [% IF c.config.linkedin %]<li><a href="[% c.config.linkedin %]" class="tips" title="Follow [% c.config.license_holder %] on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>[% END %]
+                    </ul>
+                </div>
+                [% END %]
+            </div>
+        </div>
+    </section>
+    <!-- End footer -->

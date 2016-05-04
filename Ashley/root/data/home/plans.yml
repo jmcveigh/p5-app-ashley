@@ -1,0 +1,43 @@
+---
+plans:
+  -
+    button: '<a class="btn btn-lg" href="#">REGISTER</a>'
+    focus: '1'
+    name: Free
+    points:
+      - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      - 'Nullam scelerisque id nunc nec volutpat.'
+      - 'Cras ut ultricies eros.'
+      - 'Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros.'
+    price: '0.00'
+    recurrence: 'per month'
+  -
+    button: '<a class="btn btn-lg" href="#">REGISTER</a>'
+    name: Silver
+    points:
+      - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      - 'Nullam scelerisque id nunc nec volutpat.'
+      - 'Cras ut ultricies eros.'
+      - 'Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros.'
+    price: '100.00'
+    recurrence: 'per month'
+  -
+    button: '<a class="btn btn-lg" href="#">REGISTER</a>'
+    name: Gold
+    points:
+      - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      - 'Nullam scelerisque id nunc nec volutpat.'
+      - 'Cras ut ultricies eros.'
+      - 'Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros.'
+    price: '250.00'
+    recurrence: 'per month'
+  -
+    button: '<a class="btn btn-lg" href="#">REGISTER</a>'
+    name: Platinum
+    points:
+      - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      - 'Nullam scelerisque id nunc nec volutpat.'
+      - 'Cras ut ultricies eros.'
+      - 'Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros.'
+    price: '400.00'
+    recurrence: 'per month'
